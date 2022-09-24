@@ -20,7 +20,7 @@ namespace APIBelmin.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Activity>>> GetActivities()
         {
-            return await _context.Activities.ToListAsync();
+            return await _context.Activities.OrderBy(x => x.Date).ToListAsync();
         }
 
         [HttpGet("{id}")] // activities/id
