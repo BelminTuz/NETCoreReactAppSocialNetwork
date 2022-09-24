@@ -13,6 +13,9 @@ namespace DataBelmin
         {
         }
 
-        public DbSet<Activity>? Activities { get; set; }
+        public DbSet<Activity>? Activities {
+            get;
+            set;
+        }
     }
 }
