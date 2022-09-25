@@ -3,6 +3,7 @@ using DataBelmin;
 using Microsoft.EntityFrameworkCore;
 using MediatR;
 using ApplicationBelmin.Activities;
+using ApplicationBelmin.Core;
 
 namespace API
 {
@@ -34,6 +35,7 @@ namespace API
                 });
             });
             services.AddMediatR(typeof(List.Handler).Assembly);
+            services.AddAutoMapper(typeof(MappingProfiles).Assembly);
             
         }
 
